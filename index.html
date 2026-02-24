@@ -3,81 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة ريان المسرة | الحلول التقنية</title>
+    <title>ريان المسرة | استرجاع وتأمين</title>
     <style>
-        :root { --gold: #f1c40f; --dark: #050a10; --neon: #00ffcc; --white: #ffffff; }
-        body { font-family: "Segoe UI", sans-serif; background: var(--dark); color: white; margin: 0; padding: 0; text-align: center; }
-        .nav { background: rgba(0,0,0,0.8); padding: 15px; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
-        .section { padding: 40px 20px; max-width: 900px; margin: 0 auto; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        h2 { color: var(--gold); margin-bottom: 20px; }
-        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .q-card { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; text-align: right; }
-        .q-card h3 { color: var(--neon); font-size: 1.1em; }
-        .step-box { background: #1a1a1a; padding: 20px; border-radius: 10px; text-align: right; border-right: 5px solid var(--neon); margin-bottom: 10px; }
-        .icon-box { font-size: 2.5em; margin-bottom: 10px; }
-        .btn { display: inline-block; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 10px; transition: 0.3s; cursor: pointer; border: none; }
-        .btn-share { background: #3b5998; color: white; }
-        .btn-ask { background: var(--gold); color: black; }
-        .course-tag { background: var(--neon); color: black; padding: 2px 10px; border-radius: 5px; font-size: 0.8em; font-weight: bold; }
-        .no-copy { user-select: none; -webkit-user-select: none; }
+        body { background: #050a10; color: white; font-family: sans-serif; text-align: center; padding: 20px; }
+        .gold { color: #f1c40f; }
+        .section { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; margin: 20px 0; border: 1px solid var(--gold); }
+        .btn { display: inline-block; padding: 15px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 10px; cursor: pointer; border: none; font-size: 16px; width: 80%; }
+        .btn-ask { background: #f1c40f; color: black; }
+        .btn-share { background: #00ffcc; color: black; }
     </style>
 </head>
-<body class="no-copy" oncontextmenu="return false;">
-
-    <div class="nav">
-        <h2 style="margin:0; font-size: 1.2em;">ريان المسرة - RAYAN SECURITY</h2>
-    </div>
+<body>
+    <h1 class="gold">ريان المسرة</h1>
+    <p>خبير استرجاع وتأمين الحسابات</p>
 
     <div class="section">
-        <h2>🛡️ دليل الاسترجاع المجاني</h2>
-        <div class="step-box">
-            <strong>1. تأمين الإيميل:</strong> تأكد من تفعيل المصادقة الثنائية (2FA) فوراً.
-        </div>
-        <div class="step-box">
-            <strong>2. الهوية الرسمية:</strong> عند فقدان الوصول، استخدم رابط (Identity Confirmation) الرسمي من فيسبوك.
-        </div>
-        <p style="font-size: 0.9em; color: #888;">* هذه الطرق هي المسموح بها قانونياً من قبل الشركات.</p>
+        <h2>📢 تواصل وتفاعل</h2>
+        
+        <a href="mailto:220mhde@gmail.com?subject=طلب مساعدة من موقع ريان المسرة" class="btn btn-ask">📧 اطرح سؤالاً الآن</a>
+        
+        <button onclick="shareSite()" class="btn btn-share">🔗 مشاركة الموقع مع الأصدقاء</button>
     </div>
 
-    <div class="section">
-        <h2>❓ أسئلة شائعة (FAQ)</h2>
-        <div class="card-grid">
-            <div class="q-card">
-                <h3>هل يمكن استرجاع حساب محذوف نهائياً؟</h3>
-                <p>إذا تجاوز الحذف 30 يوماً، فالأمر صعب تقنياً، لكننا نبحث في ثغرات الأرشفة.</p>
-            </div>
-            <div class="q-card">
-                <h3>كيف أحمي حسابي من الاختراق؟</h3>
-                <p>تجنب الروابط المشبوهة واستخدم كلمات سر معقدة لا تحتوي على اسمك أو ميلادك.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>🎓 قسم التعليم والدورات</h2>
-        <div class="card-grid">
-            <div class="q-card">
-                <div class="icon-box">🛡️</div>
-                <h3>دورة صد الثغرات <span class="course-tag">قريباً</span></h3>
-                <p>تعلم كيفية سد الثغرات الأمنية في المواقع الشخصية.</p>
-            </div>
-            <div class="q-card">
-                <div class="icon-box">⚙️</div>
-                <h3>برنامج المسرة V1</h3>
-                <p>أداة فحص أمان الحسابات (متاحة للمشتركين فقط).</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>📢 تفاعل معنا</h2>
-        <button class="btn btn-ask" onclick="window.location.href=mailto:220mhde@gmail.com?subject=سؤال تقني">اطرح سؤالاً</button>
-        <button class="btn btn-share" onclick="alert(تم نسخ رابط الموقع، شاركه مع أصدقائك!)">مشاركة الموقع</button>
-    </div>
-
-    <footer style="padding: 30px; opacity: 0.5;">
-        <p>© 2026 ريان المسرة | خدمة بمرضاة الله</p>
-    </footer>
-
+    <script>
+        function shareSite() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ريان المسرة',
+                    text: 'موقع ريان المسرة لاسترجاع وتأمين الحسابات، خبراؤنا في خدمتك!',
+                    url: window.location.href
+                }).then(() => console.log('تمت المشاركة بنجاح'))
+                .catch((error) => console.log('خطأ في المشاركة', error));
+            } else {
+                alert('انسخ هذا الرابط وشاركه: ' + window.location.href);
+            }
+        }
+    </script>
 </body>
 </html>
