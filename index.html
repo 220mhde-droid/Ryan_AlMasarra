@@ -3,84 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة ريان المسرة | غرفة السيادة والأمانة</title>
+    <title>منصة ريان المسرة | غرفة السيادة المركزية</title>
     <style>
         :root { --gold: #c5a059; --bg: #010101; --neon: #00ffcc; --red: #ff3e3e; --green: #00ff41; }
-        body { background: var(--bg); color: white; font-family: 'Courier New', monospace; margin: 0; padding: 20px; user-select: none; overflow-x: hidden; }
+        body { background: var(--bg); color: white; font-family: 'Courier New', monospace; margin: 0; padding: 10px; overflow-x: hidden; }
 
-        /* الرادار العلوي */
-        .radar-bar { background: rgba(197, 160, 89, 0.1); color: var(--neon); padding: 8px; font-size: 11px; overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--gold); }
-        .radar-text { display: inline-block; animation: marquee 15s linear infinite; }
-        @keyframes marquee { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+        /* شريط الحالة العلوي المتحرك */
+        .status-header { border-bottom: 1px solid var(--gold); padding: 8px; font-size: 10px; color: var(--neon); background: rgba(0,0,0,0.9); position: fixed; top: 0; width: 100%; z-index: 100; }
 
-        /* غرفة التحكم (المظهر الخارجي) */
-        .admin-room { border: 2px double var(--gold); background: #000; padding: 20px; margin-top: 30px; position: relative; overflow: hidden; height: 250px; }
-        .code-stream { font-size: 10px; line-height: 1.5; pointer-events: none; }
-        .code-yellow { color: var(--gold); }
-        .code-red { color: var(--red); }
-        .code-green { color: var(--green); }
+        /* الشعار واللوغو الضخم */
+        .hero-section { margin-top: 60px; text-align: center; padding: 20px; }
+        .main-logo { font-size: 35px; color: var(--gold); text-shadow: 0 0 20px var(--gold); letter-spacing: 4px; font-weight: bold; }
+        .sub-logo { color: var(--neon); font-size: 12px; margin-top: 5px; opacity: 0.8; }
 
-        /* بوابة الدخول والنافذة السرية */
-        .admin-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .admin-window { display: none; background: #050505; border: 2px solid var(--gold); padding: 20px; width: 85%; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2000; box-shadow: 0 0 50px var(--gold); }
+        /* غرفة العمليات (الرادار والأكواد) */
+        .ops-chamber { border: 2px solid var(--gold); background: #000; height: 320px; margin: 20px auto; position: relative; width: 95%; max-width: 600px; overflow: hidden; box-shadow: inset 0 0 40px rgba(197, 160, 89, 0.3); }
+        .code-stream { padding: 10px; font-size: 10px; line-height: 1.5; }
+        .c-gold { color: var(--gold); } .c-red { color: var(--red); } .c-green { color: var(--green); }
 
-        .btn-enter { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 10px 20px; cursor: pointer; font-weight: bold; margin-top: 10px; }
-        .btn-enter:hover { background: var(--gold); color: black; }
+        /* بوابة الدخول المركزية */
+        .gate-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 5; }
+        .btn-enter { background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 15px 35px; cursor: pointer; font-weight: bold; font-size: 16px; transition: 0.3s; box-shadow: 0 0 15px var(--gold); }
+        .btn-enter:hover { background: var(--gold); color: #000; }
+
+        /* النافذة الترحيبية الضخمة (التي كانت تعجبك) */
+        .master-vault { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 450px; background: #080808; border: 2px solid var(--neon); padding: 30px; z-index: 1000; box-shadow: 0 0 70px var(--neon); }
+        .vault-title { color: var(--neon); border-bottom: 1px solid var(--neon); padding-bottom: 10px; font-size: 18px; margin-bottom: 20px; }
+        .vault-content { color: var(--green); font-size: 13px; line-height: 1.8; text-align: right; }
+
+        .footer-tag { font-size: 9px; color: #444; margin-top: 20px; text-align: center; letter-spacing: 2px; }
     </style>
 </head>
 <body oncontextmenu="return false;">
 
-    <div class="radar-bar">
-        <div class="radar-text"> [STATUS: TRUST_PROTOCOL_ACTIVE] [OWNER: ALAA] [IDENTITY: RYAN_ALMASARRA] [PROTECTING_ASSETS...] </div>
+    <div class="status-header">
+        <marquee> [SYSTEM: ACTIVE] [IDENTITY: RYAN_ALMASARRA] [OWNER: ALAA] [SECURITY: MAXIMUM_TRUST] [LOCATION: SOVEREIGN_VAULT] </marquee>
     </div>
 
-    <h1 style="text-align: center; color: var(--gold); text-shadow: 0 0 20px var(--gold); margin: 20px 0;">رَيَّان المَسَرَّة</h1>
+    <div class="hero-section">
+        <div class="main-logo">رَيَّان المَسَرَّة</div>
+        <div class="sub-logo">غرفة السيادة والتحكم المركزية</div>
+    </div>
 
-    <div class="admin-room">
-        <div class="admin-overlay" id="overlay">
-            <span style="color: var(--gold); letter-spacing: 2px;">🔐 غُرفة السيادة والتحكم</span>
-            <button class="btn-enter" onclick="openAdmin()">دخول المالك</button>
+    <div class="ops-chamber">
+        <div class="gate-overlay" id="gate">
+            <div style="font-size: 40px; margin-bottom: 15px;">🔐</div>
+            <button class="btn-enter" onclick="unlockChamber()">دخول المالك والسيادة</button>
         </div>
-        <div class="code-stream" id="stream"></div>
+        <div id="matrix" class="code-stream"></div>
     </div>
 
-    <div class="admin-window" id="adminWindow">
-        <h3 style="color: var(--gold); border-bottom: 1px solid var(--gold);">[ لوحة التحكم - ميثاق الأمانة ]</h3>
-        <div style="color: var(--green); font-size: 11px; height: 150px; overflow-y: auto; margin-bottom: 15px;">
-            >> نظام التشفير: مفعل بنسبة 100%<br>
-            >> ملفات الأمانة: محمية داخل النواة<br>
-            >> سجل المالك: "الأمانة هي جسر السيادة"<br>
-            >> حالة الخادم: مستقر تماماً
+    <div class="master-vault" id="masterVault">
+        <div class="vault-title">🔓 [ ميثاق الأمانة والسيادة ]</div>
+        <div class="vault-content">
+            >> أهلاً بك يا **علاء** في حصنك المنيع.. <br>
+            >> تم جرد سجلات الأمانة بنجاح.. <br>
+            >> جميع الأكواد تحت سيطرتك المطلقة.. <br>
+            >> [تنبيه]: السيادة ليست مجرد لقب، بل هي فعل.. <br>
+            >> الحالة: متصل بالسيرفر العالمي.. <br>
+            >> ميثاقنا: "الأمانة هي جسر السيادة".
         </div>
-        <button class="btn-enter" style="border-color: var(--red); color: var(--red);" onclick="closeAdmin()">إغلاق وحماية الجلسة</button>
+        <button onclick="lockChamber()" style="background: var(--red); color: white; border: none; padding: 12px; margin-top: 25px; width: 100%; font-weight: bold; cursor: pointer;">تشفير وإغلاق الجلسة</button>
     </div>
+
+    <div class="footer-tag">PROPRIETARY_SECURE_BY_ALAA © 2026</div>
 
     <script>
-        const stream = document.getElementById('stream');
-        const colors = ['code-yellow', 'code-red', 'code-green'];
-        const logs = ["SCANNING_CORE...", "TRUST_VERIFIED", "ALAA_SHIELD_UP", "PROTECTING_DATA"];
+        // محاكي الأكواد المتحركة (الذي يعطي الضخامة)
+        const matrix = document.getElementById('matrix');
+        const logs = ["ACCESS_GRANTED", "ENCRYPTING_DATA", "ALAA_SOVEREIGNTY_ON", "TRUST_PROTOCOL_ACTIVE", "SCANNING_VAULT..."];
+        const colors = ["c-gold", "c-red", "c-green"];
 
         setInterval(() => {
-            const line = document.createElement('div');
-            line.className = colors[Math.floor(Math.random() * colors.length)];
-            line.innerText = ;
-            stream.prepend(line);
-            if (stream.children.length > 20) stream.lastChild.remove();
-        }, 400);
+            const div = document.createElement('div');
+            div.className = colors[Math.floor(Math.random()*3)];
+            div.innerText = ;
+            matrix.prepend(div);
+            if(matrix.children.length > 15) matrix.lastChild.remove();
+        }, 600);
 
-        function openAdmin() {
-            let pass = prompt("أدخل رمز ميثاق الشرف:");
-            if (pass === "1234") { // الباسورد الافتراضي
-                document.getElementById('adminWindow').style.display = 'block';
-                document.getElementById('overlay').style.opacity = '0';
+        function unlockChamber() {
+            let pass = prompt("أدخل رمز السيادة الخاص بك:");
+            if(pass === "1234") {
+                document.getElementById('masterVault').style.display = 'block';
+                document.getElementById('gate').style.opacity = '0.1';
+                document.getElementById('gate').style.pointerEvents = 'none';
             } else {
-                alert("تنبيه: محاولة اختراق فاشلة لغرفة المالك!");
+                alert("! تَنْبِيِه: مَحَاولَة دُخُول غَيْر مَشْرُوعَة");
             }
         }
 
-        function closeAdmin() {
-            document.getElementById('adminWindow').style.display = 'none';
-            document.getElementById('overlay').style.opacity = '1';
+        function lockChamber() {
+            document.getElementById('masterVault').style.display = 'none';
+            document.getElementById('gate').style.opacity = '1';
+            document.getElementById('gate').style.pointerEvents = 'auto';
         }
     </script>
 </body>
